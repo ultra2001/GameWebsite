@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="img.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <style>#google_translate_element,.skiptranslate{display:none;}body{top:0!important;}</style>
+    <div id="google_translate_element"></div>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt', 
+                includedLanguages: 'de', 
+                autoDisplay: false
+            }, 'google_translate_element');
+            var a = document.querySelector("#google_translate_element select");
+            a.selectedIndex=1;
+            a.dispatchEvent(new Event('change'));
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <title>Tic-Tac-Toe </title>
+</head>
+<body>
+
+
+
+    <nav  class="navbar">
+
+        <div class="navbar__container">
+    
+        <a href="#home" id="navbar__logo">PAP</a>
+    
+        <div class="navbar__toggle" id="mobile-menu">
+    
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+    
+         </div>
+    
+         <ul class="navbar__menu">
+    
+             <li class="navbar__item">
+                 <a href="index.html" class="navbar__links" id="home-page">Home</a>
+             </li>
+    
+    
+             <li class="navbar__item">
+                <a href="games.html" class="navbar__links"
+                 id="about-page">Jogos</a>
+            </li>
+    
+      
+    
+          
+                           
+         </ul>
+        </div>
+        </nav>
+    
+    
+    
+    <div class="game">
+        <form>
+            <div class="board"><svg class="board__line" style="--x: 1; --y: 0">
+                    <path d="M 5 5 L 295 5" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="300" stroke-dashoffset="300"></path>
+                </svg><svg class="board__line" style="--x: 2; --y: 0">
+                    <path d="M 5 5 L 295 5" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="300" stroke-dashoffset="300"></path>
+                </svg><svg class="board__line" style="--x: 0; --y: 1">
+                    <path d="M 5 5 L 295 5" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="300" stroke-dashoffset="300"></path>
+                </svg><svg class="board__line" style="--x: 0; --y: 2">
+                    <path d="M 5 5 L 295 5" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="300" stroke-dashoffset="300"></path>
+                </svg><input type="checkbox" id="x--0" style="--col: 0; --row: 0" /><span style="--col: 0; --row: 0"><svg class="x">
+                        <path class="cross" d="M 20 20 L 80 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                        <path class="cross" d="M 80 20 L 20 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                    </svg></span><input type="checkbox" id="o--0" style="--col: 0; --row: 0" /><span style="--col: 0; --row: 0"><svg class="o">
+                        <circle class="naught" cx="50" cy="50" r="30" fill="none" stroke-width="10" stroke-dasharray="200" stroke-dashoffset="200" stroke-linecap="round"></circle>
+                    </svg></span><input type="checkbox" id="x--1" style="--col: 1; --row: 0" /><span style="--col: 1; --row: 0"><svg class="x">
+                        <path class="cross" d="M 20 20 L 80 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                        <path class="cross" d="M 80 20 L 20 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                    </svg></span><input type="checkbox" id="o--1" style="--col: 1; --row: 0" /><span style="--col: 1; --row: 0"><svg class="o">
+                        <circle class="naught" cx="50" cy="50" r="30" fill="none" stroke-width="10" stroke-dasharray="200" stroke-dashoffset="200" stroke-linecap="round"></circle>
+                    </svg></span><input type="checkbox" id="x--2" style="--col: 2; --row: 0" /><span style="--col: 2; --row: 0"><svg class="x">
+                        <path class="cross" d="M 20 20 L 80 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                        <path class="cross" d="M 80 20 L 20 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                    </svg></span><input type="checkbox" id="o--2" style="--col: 2; --row: 0" /><span style="--col: 2; --row: 0"><svg class="o">
+                        <circle class="naught" cx="50" cy="50" r="30" fill="none" stroke-width="10" stroke-dasharray="200" stroke-dashoffset="200" stroke-linecap="round"></circle>
+                    </svg></span><input type="checkbox" id="x--3" style="--col: 0; --row: 1" /><span style="--col: 0; --row: 1"><svg class="x">
+                        <path class="cross" d="M 20 20 L 80 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                        <path class="cross" d="M 80 20 L 20 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                    </svg></span><input type="checkbox" id="o--3" style="--col: 0; --row: 1" /><span style="--col: 0; --row: 1"><svg class="o">
+                        <circle class="naught" cx="50" cy="50" r="30" fill="none" stroke-width="10" stroke-dasharray="200" stroke-dashoffset="200" stroke-linecap="round"></circle>
+                    </svg></span><input type="checkbox" id="x--4" style="--col: 1; --row: 1" /><span style="--col: 1; --row: 1"><svg class="x">
+                        <path class="cross" d="M 20 20 L 80 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                        <path class="cross" d="M 80 20 L 20 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                    </svg></span><input type="checkbox" id="o--4" style="--col: 1; --row: 1" /><span style="--col: 1; --row: 1"><svg class="o">
+                        <circle class="naught" cx="50" cy="50" r="30" fill="none" stroke-width="10" stroke-dasharray="200" stroke-dashoffset="200" stroke-linecap="round"></circle>
+                    </svg></span><input type="checkbox" id="x--5" style="--col: 2; --row: 1" /><span style="--col: 2; --row: 1"><svg class="x">
+                        <path class="cross" d="M 20 20 L 80 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                        <path class="cross" d="M 80 20 L 20 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                    </svg></span><input type="checkbox" id="o--5" style="--col: 2; --row: 1" /><span style="--col: 2; --row: 1"><svg class="o">
+                        <circle class="naught" cx="50" cy="50" r="30" fill="none" stroke-width="10" stroke-dasharray="200" stroke-dashoffset="200" stroke-linecap="round"></circle>
+                    </svg></span><input type="checkbox" id="x--6" style="--col: 0; --row: 2" /><span style="--col: 0; --row: 2"><svg class="x">
+                        <path class="cross" d="M 20 20 L 80 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                        <path class="cross" d="M 80 20 L 20 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                    </svg></span><input type="checkbox" id="o--6" style="--col: 0; --row: 2" /><span style="--col: 0; --row: 2"><svg class="o">
+                        <circle class="naught" cx="50" cy="50" r="30" fill="none" stroke-width="10" stroke-dasharray="200" stroke-dashoffset="200" stroke-linecap="round"></circle>
+                    </svg></span><input type="checkbox" id="x--7" style="--col: 1; --row: 2" /><span style="--col: 1; --row: 2"><svg class="x">
+                        <path class="cross" d="M 20 20 L 80 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                        <path class="cross" d="M 80 20 L 20 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                    </svg></span><input type="checkbox" id="o--7" style="--col: 1; --row: 2" /><span style="--col: 1; --row: 2"><svg class="o">
+                        <circle class="naught" cx="50" cy="50" r="30" fill="none" stroke-width="10" stroke-dasharray="200" stroke-dashoffset="200" stroke-linecap="round"></circle>
+                    </svg></span><input type="checkbox" id="x--8" style="--col: 2; --row: 2" /><span style="--col: 2; --row: 2"><svg class="x">
+                        <path class="cross" d="M 20 20 L 80 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                        <path class="cross" d="M 80 20 L 20 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                    </svg></span><input type="checkbox" id="o--8" style="--col: 2; --row: 2" /><span style="--col: 2; --row: 2"><svg class="o">
+                        <circle class="naught" cx="50" cy="50" r="30" fill="none" stroke-width="10" stroke-dasharray="200" stroke-dashoffset="200" stroke-linecap="round"></circle>
+                    </svg></span><label for="x--0" style="--col: 0; --row: 0"></label><label for="o--0" style="--col: 0; --row: 0"></label><label for="x--1" style="--col: 1; --row: 0"></label><label for="o--1" style="--col: 1; --row: 0"></label><label for="x--2" style="--col: 2; --row: 0"></label><label for="o--2" style="--col: 2; --row: 0"></label><label for="x--3" style="--col: 0; --row: 1"></label><label for="o--3" style="--col: 0; --row: 1"></label><label for="x--4" style="--col: 1; --row: 1"></label><label for="o--4" style="--col: 1; --row: 1"></label><label for="x--5" style="--col: 2; --row: 1"></label><label for="o--5" style="--col: 2; --row: 1"></label><label for="x--6" style="--col: 0; --row: 2"></label><label for="o--6" style="--col: 0; --row: 2"></label><label for="x--7" style="--col: 1; --row: 2"></label><label for="o--7" style="--col: 1; --row: 2"></label><label for="x--8" style="--col: 2; --row: 2"></label><label for="o--8" style="--col: 2; --row: 2"></label>
+                <div class="board__result board__result--x result">
+                    <dl class="result__content">
+                        <dt class="result__title">Winner!</dt>
+                        <dd class="result__details"><svg class="x result__icon">
+                                <path class="cross" d="M 20 20 L 80 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                                <path class="cross" d="M 80 20 L 20 80" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"></path>
+                            </svg></dd><button class="result__reset" type="reset">Play again</button>
+                    </dl>
+                    <div class="result__firework-icon" style="--y: 279; --r: 269"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 305; --r: 219"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 350; --r: 317"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 481; --r: 157"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 491; --r: 253"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 468; --r: 220"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 351; --r: 217"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 290; --r: 26"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 473; --r: 80"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 345; --r: 162"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 359; --r: 144"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 397; --r: 178"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 242; --r: 331"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 263; --r: 321"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 305; --r: 187"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 387; --r: 345"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 234; --r: 105"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 227; --r: 218"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 450; --r: 213"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 454; --r: 301"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 280; --r: 308"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 292; --r: 278"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 487; --r: 53"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 385; --r: 88"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 230; --r: 287"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 361; --r: 65"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 448; --r: 228"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 368; --r: 182"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 358; --r: 206"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 328; --r: 35"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                </div>
+                <div class="board__result board__result--o result">
+                    <dl class="result__content">
+                        <dt class="result__title">Winner!</dt>
+                        <dd class="result__details"><svg class="o result__icon">
+                                <circle class="naught" cx="50" cy="50" r="30" fill="none" stroke-width="10" stroke-dasharray="200" stroke-dashoffset="200" stroke-linecap="round"></circle>
+                            </svg></dd><button class="result__reset" type="reset">Play again</button>
+                    </dl>
+                    <div class="result__firework-icon" style="--y: 432; --r: 98"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 498; --r: 182"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 223; --r: 133"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 203; --r: 226"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 488; --r: 231"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 322; --r: 298"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 299; --r: 15"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 493; --r: 161"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 314; --r: 30"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 392; --r: 255"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 285; --r: 247"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 297; --r: 260"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 342; --r: 140"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 356; --r: 315"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 265; --r: 63"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 391; --r: 332"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 216; --r: 172"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 310; --r: 99"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 365; --r: 41"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 450; --r: 144"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 266; --r: 41"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 237; --r: 4"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 281; --r: 215"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 291; --r: 249"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 259; --r: 182"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 365; --r: 264"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 335; --r: 232"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 204; --r: 104"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 429; --r: 9"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                    <div class="result__firework-icon" style="--y: 468; --r: 156"><img src="https://img.icons8.com/color/50/000000/firework-explosion.png"/></div>
+                </div>
+                <div class="board__result board__result--draw">
+                    <dl class="result__content">
+                        <dt style=" color:red; font-size:40px;" class="result__title">Draw!</dt>
+                        <dd class="result__details">
+                            <div class="result__emoji"> </div>
+                        </dd><button class="result__reset" type="reset">Play again</button>
+                    </dl>
+                </div>
+            </div>
+        </form>
+
+        
+
+
+
+        <div class="board__result board__result--draw">
+            <dl class="result__content">
+                <dt style=" color:rgb(0, 255, 34); font-size:40px;" class="result__title">Draw!</dt>
+                <dd class="result__details">
+                    <div class="result__emoji"> </div>
+                </dd><button  class="result__reset" type="reset">Play again</button>
+            </dl>
+        </div>
+</body>
+</html>
